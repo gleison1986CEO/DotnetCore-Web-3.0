@@ -1,6 +1,7 @@
 jesusEsenhor 2022
 Dev Gleison Silveira 888h4ck.com
 
+RAZOR PAGES
 
 # DotnetCore6 Web3.0 BLOCKCHAIN
 Dotnet Core Web 3.0 Moralis ___

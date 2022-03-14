@@ -1,5 +1,7 @@
 using System.Diagnostics;
+
 using Microsoft.AspNetCore.Mvc;
+//Importar Razor Pages
 using RazorPages.Models;
 
 
@@ -13,12 +15,12 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-
+ // Pagina Index
     public IActionResult Index()
     {
         return View();
     }
-
+// Pagina Home
     public IActionResult home()
     {
         return View();

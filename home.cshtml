@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Pagina teste";
+}
+
+
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login WEB 3.0</title>
+    <!-- CDN web3-->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+  </head>
+
+  <body>
+    <button id="btn-login">Login Metamask</button>
+    <button id="btn-logout">Sair do Sistema</button>
+    <script> 
+
+// main.js
+
+const serverUrl = "Servidor URL MORALIS";
+const appId = "CHAVE";
+Moralis.start({ serverUrl, appId });
+
+/** Add from here down */
+async function login() {
+  let user = Moralis.User.current();
+  if (!user) {
+   try {
+      user = await Moralis.authenticate({ signingMessage: "Ola teste WEB 3.0  DOTNET CORE" })
+      console.log(user)
+      console.log(user.get('ethAddress'))
+   } catch(error) {
+     console.log(error)
+   }
+  }
+}
+
+async function logOut() {
+  await Moralis.User.logOut();
+  console.log("logged out");
+}
+
+document.getElementById("btn-login").onclick = login;
+document.getElementById("btn-logout").onclick = logOut;
+    </script>
+  </body>
+</html>

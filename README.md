@@ -5,7 +5,7 @@ RAZOR PAGES
 Utilizando Moralis WEB 3.0
 
 # DotnetCore6 Web3.0 BLOCKCHAIN
-Dotnet Core Web 3.0 Moralis ___
+Dotnet Core Web 3.0 
 
 # Execute dotnet new MVC meu-projeto
 

@@ -19,13 +19,12 @@
     <button id="btn-logout">Sair do Sistema</button>
     <script> 
 
-// main.js
 
 const serverUrl = "Servidor URL MORALIS";
 const appId = "CHAVE";
 Moralis.start({ serverUrl, appId });
 
-/** Add from here down */
+
 async function login() {
   let user = Moralis.User.current();
   if (!user) {
